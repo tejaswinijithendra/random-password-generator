@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random password generator</title>
+    <style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div{
+    margin-top: 200px;
+}
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 30px auto 5px auto;
+  background: black;
+  color: white;
+  font-family: sans serif ms;
+  font-size: 135%;
+  padding: 10px 25px;
+  border-radius: 20px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  filter: drop-shadow(0 0 5px);
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="myFunction()">Generate random passwords</button>
+        <p id="test"> </p>
+        </div>
+    
+    <script>
+function myFunction() {
+
+let letters = "!@#$%&*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+let password = "";
+
+for (let i = 0; i < 10; i++) {
+    let generate = letters[Math.floor(Math.random() * 69)];
+    password += generate;
+}
+document.getElementById("test").innerHTML = password;
+}
+    </script>
+</body>
+</html>
